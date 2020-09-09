@@ -39,7 +39,6 @@ router.get('/tasks', auth, async (req, res) => {
                 skip: parseInt(req.query.skip),
                 sort
             })
-        console.log(parseInt(req.query.limit))
         res.send(tasks)
     } catch(e) {
         res.status(500).send()
